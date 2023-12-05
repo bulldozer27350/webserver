@@ -60,6 +60,16 @@ public class CategoryController {
 	}
 	
 	/**
+	 * Read - Récupère toutes les Categories
+	 * @return - Une collection de Categories complètement renseignées
+	 */
+	@GetMapping("/categories/fill")
+	@CrossOrigin(origins = "*")
+	public void fill() {
+		this.categoryService.fill();
+	}
+	
+	/**
 	 * Update - Met à jour une Category existante
 	 * @param id - L'identifiant de la Category à mettre à jour
 	 * @param category - La Category mise à jour

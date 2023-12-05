@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 import com.openclassrooms.boulangerie.api.model.Article;
 import com.openclassrooms.boulangerie.api.repository.ArticleRepository;
 
-import lombok.Data;
-
-@Data
 @Service
 public class ArticleService {
 	

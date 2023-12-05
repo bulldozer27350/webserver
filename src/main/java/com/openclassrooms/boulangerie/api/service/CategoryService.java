@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 import com.openclassrooms.boulangerie.api.model.Category;
 import com.openclassrooms.boulangerie.api.repository.CategoryRepository;
 
-import lombok.Data;
-
-@Data
 @Service
 public class CategoryService {
 	
@@ -34,4 +31,16 @@ public class CategoryService {
 		return savedCategory;
 	}
 
+	
+	public void fill() {
+		Category category = new Category();
+		category.setName("Technologie");
+		this.saveCategory(category);
+		category = new Category();
+		category.setName("Nourriture");
+		this.saveCategory(category);
+		category = new Category();
+		category.setName("Décoration");
+		this.saveCategory(category);
+	}
 }
